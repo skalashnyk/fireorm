@@ -221,7 +221,7 @@ describe('BaseFirestoreRepository', () => {
       try {
         await bandRepository.create(entity);
       } catch (error) {
-        expect(error[0].constraints.isEmail).to.equal('Invalid email!')
+        expect(error[0].constraints.isEmail).to.equal('Invalid email!');
       }
     });
 
@@ -234,7 +234,7 @@ describe('BaseFirestoreRepository', () => {
       try {
         await bandRepository.create(entity as Band);
       } catch (error) {
-        expect(error[0].constraints.isEmail).to.equal('Invalid email!')
+        expect(error[0].constraints.isEmail).to.equal('Invalid email!');
       }
     });
 
@@ -309,7 +309,7 @@ describe('BaseFirestoreRepository', () => {
       try {
         await bandRepository.update(band);
       } catch (error) {
-        expect(error[0].constraints.isEmail).to.equal('Invalid email!')
+        expect(error[0].constraints.isEmail).to.equal('Invalid email!');
       }
     });
 
@@ -323,7 +323,7 @@ describe('BaseFirestoreRepository', () => {
       try {
         await bandRepository.create(updatedBand as Band);
       } catch (error) {
-        expect(error[0].constraints.isEmail).to.equal('Invalid email!')
+        expect(error[0].constraints.isEmail).to.equal('Invalid email!');
       }
     });
 
@@ -640,7 +640,8 @@ describe('BaseFirestoreRepository', () => {
 
       const firstAlbum = new Album();
       firstAlbum.id = 'invalid-album-name';
-      firstAlbum.name = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+      firstAlbum.name =
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
       firstAlbum.releaseDate = new Date('2002-07-22');
 
       try {
